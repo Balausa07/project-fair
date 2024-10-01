@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --bg-color: #fff;
+  --text-color: #221314;
+  --second-color: #5a7184;
+  --main-color: #6e54fa;
+  --big-font: 6rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 20px 18%;
+  transition: ease 0.4s;
+  backdrop-filter: blur(10px);
+}
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--bg-color);
+}
+.logo_name {
+  display: flex;
+}
+.nav_bar {
+  display: flex;
+}
+.nav_bar a {
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 10px;
+  transition: ease 0.4s;
+}
+.nav_bar a:hover {
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 5px 10px 30px rgb(85, 85, 85 / 20%);
+  border-radius: 4px;
+}
+#menu-icon {
+  color: var(--bg-color);
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+}
+section {
+  padding: 100px 18%;
+  color: var(--bg-color);
+}
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(https://www.gov.kz/uploads/2021/10/4/79641706b4dff95597116db028e6ca56_original.195351.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+}
+.home_text h1 {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+  color: var(--bg-color);
+  font-family: "Paytone One", sans-serif;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.home_text p {
+  color: #ffffffbf;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 38px;
+  margin-bottom: 50px;
+}
+.home_btn {
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 30px;
+  background: #ffffffbf;
+  color: var(--text-color);
+  border-radius: 4px;
+  transition: ease 0.4s;
+}
+.home_btn:hover {
+  background: var(--bg-color);
+  transform: scale(1.1);
+}
+.text h2 {
+  font-size: var(--h2-font);
+  line-height: 1.1;
+}
+.row_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+#contact {
+  background: var(--main-color);
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer {
+  padding: 20px 0;
+}
+.list {
+  width: 25%;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  margin: 0;
+}
+.list ul li:not(:last-child) {
+  margin-bottom: 16px;
+  color: var(--bg-color);
+}
+.list ul li a {
+  color: #ffffffbf;
+  font-size: var(--p-font);
+  display: block;
+  transition: 0.3s;
+}
+.list ul li a:hover {
+  color: var(--bg-color);
+  transform: translateX(14px);
+}
+.social a {
+  height: 40px;
+  width: 40px;
+  background: var(--bg-color);
+  color: var(--main-color);
+  display: inline-flex;
+  align-items: center;
+  font-size: 21px;
+  border-radius: 15px;
+  transition: 0.3s;
+  justify-content: center;
+}
+.end_text {
+  text-align: center;
+  padding-top: 90px;
+  color: var(--bg-color);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+@media (max-width: 1400px) {
+  header {
+    padding: 17px 3%;
+    transition: 0.2s;
+  }
+  header.sticky{
+    padding: 10px 3%;
+    transition: .2s;
+  }
+  section{
+    padding: 80px 3%;
+    transition: .2s;
+  }
+  :root{
+    --big-font: 4.5rem;
+    --h2-font:2.3rem;
+    --p-font:1rem
+    transition: .2s;
+  }
+}
